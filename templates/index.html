@@ -1,0 +1,53 @@
+{{ define "content" }}
+<script>
+    function updateAmount() {
+        var userName  = document.forms['trfForm'].elements['fromUser'].value
+        $.get('/api/user/?name='+userName)
+        .done(function(data) {
+            $('[name="fromUserAvail"]').val(data["balance"]);
+        });
+    }      
+</script>
+<div class="container">
+    <div class="page-title">
+        <h1>Transfer Founds</h1>        
+        <hr />
+    </div>
+    
+    <form name="trfForm" action="/transfer" method="POST">
+        <div class="form-group">
+            <label name="fromUserLbl">Transfer from</label>
+            <select class="form-control" name="fromUser" onchange="updateAmount()" required>
+                <option value="default" seleted>Select One User</option>
+                {{ range $user := . }}
+                    <option value="{{ $user.Name }}">
+                        {{ $user.Account }} - {{ $user.Name }}
+                    </option>                    
+                {{ end }}
+            </select>
+            <label name="fromUserAvailLbl">Available credit</label>
+            <input class="form-control" type="text" name="fromUserAvail" value="0.00" readonly/>
+        </div>
+        <div class="form-group">
+            <label name="toUserLbl">Transfer to</label>
+            <select class="form-control" name="toUser" required>
+                <option value="default" seleted>Select One User</option>
+                {{ range $user := . }}
+                    <option value="{{ $user.Name }}">
+                        {{ $user.Account }} - {{ $user.Name }}
+                    </option>
+                {{ end }}
+            </select>
+        </div>
+        <div class="form-group">
+            <label name="amountValLbl">Amount</label>
+            <input class="form-control" type="text" name="amountVal" value="0.00" required/>
+        </div>        
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary pull-right" value="Transfer" />
+        </div>
+    </form>
+    
+</div>
+{{ end }}
+    

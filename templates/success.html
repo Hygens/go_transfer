@@ -1,0 +1,20 @@
+{{ define "content" }}
+<div class="container">
+    <div class="page-title">
+        <h1>Transfer Founds Completed</h1> 
+        <hr/>
+    </div>
+    <div class="panel panel-default" style="color:blue">        
+        Mr(s). {{ .sender }}:
+        <lu style="list-style-type:circle;color:red">
+            <li>Your have transfered $ {{ .amount }} for Mr(s). {{ .target }}. </li> 
+            <li>Your Account Balance now is $ {{ .balance }}.</li>
+        </lu>                        
+    </div> 
+    <div>
+        <p class="lead">
+            <a href="/main">Start a new transfer</a> 
+        </p>
+    </div>
+</div>
+{{ end }}
