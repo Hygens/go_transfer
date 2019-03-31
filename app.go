@@ -1,9 +1,9 @@
 package main
 
 import (
-	. "./go_transfer/controllers"
-	. "./go_transfer/models"
-	. "./go_transfer/utilities"
+	. "github.com/Hygens/go_transfer/controllers"
+	. "github.com/Hygens/go_transfer/models"
+	. "github.com/Hygens/go_transfer/utilities"
 	"gopkg.in/unrolled/render.v1"
 	"net/http"
 	"time"

@@ -1,7 +1,7 @@
 package services
 
 import (
-	. "go_transfer/models"
+	. "github.com/Hygens/go_transfer/models"
 )
 
 func ProcessTransfer(users *Users, senderName string,

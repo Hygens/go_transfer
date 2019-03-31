@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"fmt"
-	. "go_transfer/models"
-	. "go_transfer/services"
-	. "go_transfer/utilities"
+	. "github.com/Hygens/go_transfer/models"
+	. "github.com/Hygens/go_transfer/services"
+	. "github.com/Hygens/go_transfer/utilities"
 	"gopkg.in/unrolled/render.v1"
 	"net/http"
 	"strconv"
