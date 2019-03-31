@@ -9,7 +9,7 @@ All changes are persistent on json data.
 This have one persistente text file with log for transactions with simple
 descriptions with values.
 
-The unique external library is render.v1 and javascript jquery.
+The unique external library is render.v1 and javascript jquery and bootstrap for css.
 
 The complete sample use only golang core libraries.
 
