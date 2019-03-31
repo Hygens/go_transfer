@@ -1,9 +1,9 @@
 package main
 
 import (
-	. "avenue_security/go_transfer/controllers"
-	. "avenue_security/go_transfer/models"
-	. "avenue_security/go_transfer/utilities"
+	. "./go_transfer/controllers"
+	. "./go_transfer/models"
+	. "./go_transfer/utilities"
 	"gopkg.in/unrolled/render.v1"
 	"net/http"
 	"time"

@@ -1,7 +1,7 @@
 package services
 
 import (
-	. "avenue_security/go_transfer/models"
+	. "./go_transfer/models"
 )
 
 func ProcessTransfer(users *Users, senderName string,

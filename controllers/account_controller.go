@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	. "avenue_security/go_transfer/models"
-	. "avenue_security/go_transfer/services"
-	. "avenue_security/go_transfer/utilities"
+	. "./go_transfer/models"
+	. "./go_transfer/services"
+	. "./go_transfer/utilities"
 	"fmt"
 	"gopkg.in/unrolled/render.v1"
 	"net/http"
