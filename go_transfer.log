@@ -7,3 +7,8 @@ INFO 2019/03/31 11:49:25 utils.go:65: Mr(s). defaultyou have $0.00 what is insuf
 INFO 2019/03/31 11:49:45 utils.go:65: Mr(s). defaultyou have $0.00 what is insufficient funds for transfer $0.00!!!
 INFO 2019/03/31 13:09:52 utils.go:65: Mr(s) Mary Linch our have transfered $250 for Mr(s). Gilbert Molina.
 Your Account Balance now is $1000.00.
+INFO 2019/03/31 16:43:27 utils.go:65: Mr(s). defaultyou have $0.00 what is insufficient funds for transfer $0.00!!!
+INFO 2019/03/31 16:44:22 utils.go:65: Mr(s) Kuligan Muligan our have transfered $200 for Mr(s). Kuligan Muligan.
+Your Account Balance now is $350.00.
+INFO 2019/03/31 16:45:54 utils.go:65: Mr(s) Kuligan Muligan our have transfered $100 for Mr(s). Kuligan Muligan.
+Your Account Balance now is $450.00.

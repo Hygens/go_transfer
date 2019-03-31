@@ -7,7 +7,8 @@ import (
 func ProcessTransfer(users *Users, senderName string,
 	avail float64, targetName string, amount float64) (bool, User) {
 	if (avail == float64(0) || amount == float64(0) || amount > avail) ||
-		(senderName == "default" || targetName == "default") {
+		(senderName == "default" || targetName == "default") ||
+		(senderName == targetName) {
 		return false, User{}
 	}
 	balance := avail - amount

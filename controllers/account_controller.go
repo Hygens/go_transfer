@@ -72,6 +72,9 @@ func (c *MyController) SendFounds(rw http.ResponseWriter, r *http.Request) error
 		if nameSender == "default" || nameTarget == "default" {
 			messages = append(messages, "Need select sender and target users for transfer founds!!!")
 		}
+		if nameSender == nameTarget {
+			messages = append(messages, "Need select different sender and target  users for transfer founds!!!")
+		}
 		if availCredit == float64(0) || amountVal > availCredit {
 			messages = append(messages, "Insufficient funds in your account for transfer!!!")
 			Info("Mr(s). " + nameSender + "you have $" + availCreditStr + " what is insufficient funds for transfer $" + amountValStr + "!!!")
