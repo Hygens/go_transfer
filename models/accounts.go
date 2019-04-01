@@ -16,6 +16,17 @@ type User struct {
 	Balance float64 `json:"balance"`
 }
 
+func GetUser(name string, users *Users) User {
+	var user User
+	for _, item := range users.Users {
+		if item.Name == name {
+			user = item
+			break
+		}
+	}
+	return user
+}
+
 func GetUsers() Users {
 	byteValue, err := ioutil.ReadFile("models/data.json")
 
