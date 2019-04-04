@@ -7,9 +7,13 @@ import (
 	"gopkg.in/unrolled/render.v1"
 	"net/http"
 	"time"
+	"os"
 )
 
 func main() {
+	// Heroku PORT
+	port := os.Getenv("PORT")
+
 	// Load Data
 	users := GetUsers()
 
@@ -27,11 +31,11 @@ func main() {
 	mux.Handle("/main", c.Action(c.Transfer))
 	mux.Handle("/transfer", c.Action(c.SendFounds))
 	server := &http.Server{
-		Addr:           Config.Address,
+		Addr:           ":" + port,
 		Handler:        mux,
 		ReadTimeout:    time.Duration(Config.ReadTimeout * int64(time.Second)),
 		WriteTimeout:   time.Duration(Config.WriteTimeout * int64(time.Second)),
 		MaxHeaderBytes: 1 << 20,
 	}
-	server.ListenAndServe()
+	server.ListenAndServe()	
 }
