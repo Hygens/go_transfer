@@ -27,3 +27,5 @@ go build
 
 The link for main page is:
 http://localhost:8080/main
+
+# If you like that simple implementation stars that repository, Watch and Fork if you desire the use is free for any propose.
