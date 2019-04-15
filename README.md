@@ -1,7 +1,7 @@
 # Golang Web App for Transfer Founds between Accounts
 
 The only proposal for that project is not show one complete process of transfer founds 
-but some facets for use golango for web development.
+but some facets for use golang for web development.
 
 That simple sample app use one json data for simplify tests and development.
 
