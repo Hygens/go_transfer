@@ -1,6 +1,9 @@
 # Golang Web App for Transfer Founds between Accounts
 
-That sample app use one json data for simplify tests and development.
+The only proposal for that project is not show one complete process of transfer founds 
+but some facets for use golango for web development.
+
+That simple sample app use one json data for simplify tests and development.
 
 Use MVC Model for development.
 
@@ -27,5 +30,10 @@ go build
 
 The link for main page is:
 http://localhost:8080/main
+
+## That project not include pré-conditions and post-conditions about bank transaction and any other process for conduct transactions. For that you can consult some RUP process, for example: 
+
+## Conduct Transactions - http://www.interface.ru/rational/rup51/rosetmpl/Conduct%20Transactions.html
+## Transfer Founds - http://www.interface.ru/rational/rup51/rosetmpl/Transfer%20Funds.html
 
 ## If you like that simple implementation Stars that repository, Watch and Fork if you desire the use is free for any purpose.
