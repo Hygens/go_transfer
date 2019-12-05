@@ -26,7 +26,7 @@ cd go_transfer
 
 go build
 
-./go_transfer
+PORT=8080 ./go_transfer
 
 The link for main page is:
 http://localhost:8080/main
