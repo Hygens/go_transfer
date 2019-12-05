@@ -29,8 +29,8 @@ type MyController struct {
 }
 
 func (c *MyController) GetUser(rw http.ResponseWriter, r *http.Request) error {
-	name, _ := r.URL.Query()["name"]	
-	user := GetUser(name[0], c.Users)
+	name, _ := r.URL.Query()["name"]
+	_, user := GetUser(name[0], c.Users)
 	c.JSON(rw, 200, map[string]float64{"balance": user.Balance})
 	return nil
 }

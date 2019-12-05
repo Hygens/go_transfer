@@ -16,15 +16,17 @@ type User struct {
 	Balance float64 `json:"balance"`
 }
 
-func GetUser(name string, users *Users) User {
-	var user User
-	for _, item := range users.Users {
+func GetUser(name string, users *Users) (int, *User) {
+	var user *User
+	var k int
+	for i, item := range users.Users {
 		if item.Name == name {
-			user = item
+			user = &item
+			k = i
 			break
 		}
 	}
-	return user
+	return k, user
 }
 
 func GetUsers() Users {

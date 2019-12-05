@@ -1,0 +1,6 @@
+INFO 2019/12/05 12:25:00 utils.go:65: Mr(s) Mike Molton our have transfered $100 for Mr(s). Mary Linch.
+Your Account Balance now is $1200.00.
+INFO 2019/12/05 12:36:23 utils.go:65: Mr(s) Mike Molton our have transfered $100 for Mr(s). Mary Linch.
+Your Account Balance now is $1200.00.
+INFO 2019/12/05 12:37:02 utils.go:65: Mr(s) Mary Linch our have transfered $100 for Mr(s). Mike Molton.
+Your Account Balance now is $1000.00.

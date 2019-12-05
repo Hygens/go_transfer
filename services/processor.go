@@ -5,29 +5,20 @@ import (
 )
 
 func ProcessTransfer(users *Users, senderName string,
-	avail float64, targetName string, amount float64) (bool, User) {
+	avail float64, targetName string, amount float64) (bool, *User) {
 	if (avail == float64(0) || amount == float64(0) || amount > avail) ||
 		(senderName == "default" || targetName == "default") ||
 		(senderName == targetName) {
-		return false, User{}
+		return false, &User{}
 	}
 	balance := avail - amount
-	var ret User
-	i := 0
-	for k, user := range users.Users {
-		if user.Name == senderName {
-			users.Users[k].Balance = balance
-			i++
-		}
-		if user.Name == targetName {
-			users.Users[k].Balance += amount
-			ret = users.Users[k]
-			i++
-		}
-		if i == 2 {
-			break
-		}
-	}
+	var receiver *User
+	var k1, k2 int
+	k1, _ = GetUser(senderName, users)
+	users.Users[k1].Balance = balance
+	k2, receiver = GetUser(targetName, users)
+	receiver.Balance += amount
+	users.Users[k2].Balance = receiver.Balance
 	SaveUsers(users)
-	return true, ret
+	return true, receiver
 }
